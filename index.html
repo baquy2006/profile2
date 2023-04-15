@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>update</title>
+    <link rel="stylesheet" href="style.css" class="">
+</head>
+<body>
+    <ul class="menu">
+        <li>HOME</li>
+        <li>THÔNG TIN</li>
+    </ul>
+
+    <ul class="tieude">
+        <li class="tieude1">Profile</li>
+    </ul>
+   
+    <div class="content">
+        <span > Hello, It's Me</span>
+        <span > Đào Bá Quý</span>
+        <div class="container">And I'm a
+                    <p class="text1"></p>
+                    <p class="text2"></p>
+                    <p class="text3"></p>
+                    <p class="text4"></p>
+         <div class="container1"></div>
+          </div>
+      
+        <span class="textchay1">Anh ước anh là một máy tính để có thể
+            Delete quá khứ về em
+            Copy niềm vui hiện tại
+            Cut những nỗi đau
+            Save lại những nụ cười =))</span>
+            
+<div class="listanh">
+
+        <button class="button-1" onclick="openNewTab('https://www.facebook.com/profile.php?id=100030298212890')">
+                        <img src="anh/img1.png" width="40px" height="40px">   
+        </button>
+        <button class="button-2" onclick="openNewTab('https://www.tiktok.com/@daobaquy1904')">
+                        <img src="anh/img2.png" width="40px" height="40px">   
+        </button>
+        <button class="button-3" onclick="openNewTab('https://github.com/baquy2006')">
+                         <img src="anh/img3.png" width="40px" height="40px">   
+        </button>
+       
+                
+</div>
+    </div>
+    <div class="image">
+        <img src="anh/anhmeo-removebg.png" width="500px">
+    </div>
+
+
+    <script src="java.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+<script>
+    var typed = new Typed('.container1', {
+            strings: ['...........', 'Newbie', '...........', '2006'],
+            smartBackspace: true,
+            typeSpeed: 80,
+            backSpeed: 80,
+            loop: true,
+    });
+
+    function openNewTab(url) {
+			
+			// Tạo một tab mới và mở đường dẫn liên kết đó
+            var newTab = window.open(url, "_blank");
+			// Chuyển đến tab mới
+            newTab.focus();
+		}
+</script>
+</body>
+</html>
