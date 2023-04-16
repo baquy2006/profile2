@@ -219,19 +219,82 @@ ul.menu{
   margin-top: -30%;
   right: -65%;
   border-radius: 50% ;
-  box-shadow: 0 0 20px rgb(0, 225, 255),
-              0 0 20px rgb(0, 225, 255);
+  box-shadow: inset 0 0 10px rgb(0, 225, 255),
+                    0 0 11px rgb(0, 225, 255);
+                  
+  background-size: 400%;
   background-color: #040c0e00;
   filter:brightness(1.2);
   transition: 0.75s;
-  animation: anhmeo2  5s infinite ease-in-out ;
-  animation-delay: 2s; 
+  animation: anhmeo2  5s infinite ease-in-out, boxshadow 5s ease-in-out infinite, border  1.5s;
+  animation-delay: 2s, 2s, 0s;            
 }
-.image img{
-  background-color: rgb(0, 238, 255);
-  clip-path: circle(40%);
-  animation: anhmeo 5s ease-in-out  infinite ;
+@keyframes border{
+  0%{
+    border-radius: 1%;
+  }
+  100%{
+    border-radius: 50%;
+  }
 }
+@keyframes boxshadow {
+  0% {
+    box-shadow: inset 0 0  10px  #ff0040,
+    0 0  15px  #ff0040;
+  }
+  12.5% {
+    box-shadow: inset 0 0  10px #ff00ea,
+    0 0  15px #ff00ea;
+  }
+  25% {
+  
+    box-shadow: inset 0 0  10px #ffdd00,
+    0 0  15px #ffe600;
+  }
+  37.5% {
+    box-shadow: inset 0 0  10px #00bfff,
+                     0 0  15px #00befd;
+  }
+  50% {
+    box-shadow: inset 0 0 10px #00ffbf,
+                    0 0 14px #00f8ba;
+  }
+  62.5% {
+    box-shadow: inset 0 0 10px #ffdd00,
+    0 0 15px #fdd700;
+  }
+  75% {
+    box-shadow: inset 0 0  10px #c850c0,
+    0 0  15px #fc00eb;
+  }
+  87.5% {
+    box-shadow: inset 0 0  10px #002aff,
+    0 0  15px #002aff;
+  }
+  100% {
+    box-shadow: inset 0 0  10px #ff0040,
+    0 0  15px #ff0040;
+   
+  }
+
+}
+.image::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      filter:blur(5px);
+      height: 100%;
+      background-image: linear-gradient(200deg,
+    #fc6c8f, #ff2ced, #ffb86c, #2cccff, #20e3b2, #ffcc70, #c850c0, #4158d0);
+    
+      clip-path: circle(40%);
+      background-size: 300%;
+      z-index: -1;
+      animation: spin 5s linear infinite;
+}
+
 @keyframes anhmeo{
   0%{
     transform: scale(0.9);
@@ -247,6 +310,14 @@ ul.menu{
   }
   100%{
     transform: scale(0.9);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 
